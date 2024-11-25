@@ -1,0 +1,93 @@
+/* Global Styles */
+html {
+ scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+body {
+ font-size: clamp(0.8rem, 1.3vw, 1.1rem); /* Fluid typography */
+ line-height: 1.5;
+ padding-top: 56px; /* Ensure padding for fixed navbar */
+}
+
+/* Header Section */
+header {
+ height: 90vh;
+ background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url("./images/usa.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+
+header h1 {
+ font-weight: 800;
+ font-size: clamp(2rem, 6vw, 3.5rem); /* Dynamic font-size */
+}
+
+header p {
+ font-weight: 600;
+ font-size: clamp(1rem, 3vw, 1.8rem); /* Dynamic font-size */
+}
+
+/* Logo Styling */
+.logo {
+ height: 50px;
+ width: 120px;
+}
+
+/* Section Padding */
+#about,
+#services,
+#testimonials,
+#contact {
+ padding-top: 80px !important; /* Ensure space below navbar */
+}
+
+/* Card Image Styling */
+.card-img {
+ height: 200px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+ /* Adjust header text for smaller screens */
+ header h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Slightly smaller for mobile */
+ }
+
+ header p {
+  font-size: clamp(1rem, 4vw, 1.5rem); /* Slightly smaller for mobile */
+ }
+
+ /* Adjust the height of the logo */
+ .logo {
+  height: 40px;
+  width: 100px;
+ }
+
+ /* Adjust card image for smaller screens */
+ .card-img {
+  height: 250px;
+ }
+}
+
+@media (max-width: 480px) {
+ /* Further adjustments for very small screens */
+ header h1 {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+ }
+
+ header p {
+  font-size: clamp(1rem, 5vw, 1.2rem);
+ }
+
+ .logo {
+  height: 35px;
+  width: 80px;
+ }
+}
